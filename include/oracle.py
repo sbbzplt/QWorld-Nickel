@@ -1,5 +1,6 @@
 import random
-from qiskit import QuantumCircuit, execute, Aer, QuantumRegister, ClassicalRegister
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
+from qiskit_aer import QasmSimulator
 
 def oracle():
     type = random.choice(["constant", "balanced"])
@@ -20,8 +21,6 @@ def oracle():
     result.barrier()
     return result
 
-import random
-from qiskit import QuantumCircuit, execute, Aer
 
 def oraclej(n):
     result = QuantumCircuit(n+1)
